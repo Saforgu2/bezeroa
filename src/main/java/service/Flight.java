@@ -153,5 +153,9 @@ public class Flight {
         }
         return this.concreteFlights;
     }
+    
+    public String toString() {
+		return flightCode + "/" + departingCity + "/" + arrivingCity;
+	}
 
 }

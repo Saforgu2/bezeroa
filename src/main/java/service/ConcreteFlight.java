@@ -1,6 +1,9 @@
 
 package service;
 
+import java.util.Calendar;
+import java.util.GregorianCalendar;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlID;
@@ -206,5 +209,14 @@ public class ConcreteFlight {
     public void setFlight(Object value) {
         this.flight = value;
     }
+    
+    public String toString() {
+    	Calendar calendar = date.toGregorianCalendar();
+    	int year = calendar.get(Calendar.YEAR);
+    	//Add one to month {0 - 11}
+    	int month = calendar.get(Calendar.MONTH) + 1;
+    	int day = calendar.get(Calendar.DAY_OF_MONTH);
+    	
+    	return flight.toString()+"-"+(year)+"/"+(month)+"/"+day+"/"+time+"-->"+bussinesNumber+"/"+firstNumber+"/"+touristNumber;}
 
 }

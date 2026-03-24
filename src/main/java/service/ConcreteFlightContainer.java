@@ -83,5 +83,9 @@ public class ConcreteFlightContainer {
     public void setFlight(Flight value) {
         this.flight = value;
     }
+    
+    public String toString() {
+		return this.concreteFlight.toString() + "/" + this.flight.toString();
+	}
 
 }
